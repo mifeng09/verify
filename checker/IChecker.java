@@ -16,4 +16,11 @@ public interface IChecker {
 			return false;
 		}
 	};
+	
+	final static public IChecker IsIntegerChecker = new IChecker() {
+		@Override
+		public boolean check(Object value) {
+			return value instanceof Integer || value instanceof Long;
+		}
+	};
 }
