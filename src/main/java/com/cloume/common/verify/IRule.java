@@ -1,6 +1,6 @@
-package com.cloume.hsep.web.verify;
+package com.cloume.common.verify;
 
-import com.cloume.hsep.web.verify.checker.IChecker;
+import com.cloume.common.verify.checker.IChecker;
 
 public interface IRule {
 	String getKey();

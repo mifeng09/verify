@@ -1,12 +1,12 @@
-package com.cloume.hsep.web.verify;
+package com.cloume.common.verify;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.cloume.hsep.web.verify.checker.IChecker;
-import com.cloume.hsep.web.verify.checker.RegexChecker;
+import com.cloume.common.verify.checker.IChecker;
+import com.cloume.common.verify.checker.RegexChecker;
 
 public class Verifier {
 	

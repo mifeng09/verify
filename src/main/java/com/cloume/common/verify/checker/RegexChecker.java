@@ -1,4 +1,4 @@
-package com.cloume.hsep.web.verify.checker;
+package com.cloume.common.verify.checker;
 
 public class RegexChecker implements IChecker {
 	

@@ -1,4 +1,4 @@
-package com.cloume.hsep.web.verify;
+package com.cloume.common.verify;
 
 public interface IResultCallback {
 	void result(boolean success, String reason);
