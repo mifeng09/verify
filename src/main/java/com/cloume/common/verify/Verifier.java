@@ -1,6 +1,8 @@
 package com.cloume.common.verify;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -114,5 +116,21 @@ public class Verifier {
 		}
 		
 		return result;
+	}
+	
+	public boolean verify(Object target){
+		List<Field> fields = org.apache.commons.lang3.reflect.FieldUtils.getAllFieldsList(target.getClass());
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		fields.forEach(e -> {
+				try {
+					e.setAccessible(true);
+					map.put(e.getName(), e.get(target));
+				} catch (Exception ex) {
+					System.err.println("failed to get value from target, " + ex.getMessage());
+				}
+		});
+		
+		return verify(map);
 	}
 }
