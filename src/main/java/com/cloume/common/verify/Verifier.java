@@ -119,6 +119,10 @@ public class Verifier {
 	}
 	
 	public boolean verify(Object target){
+		if(target instanceof Map) {
+			return verify((Map<String, Object>) target);
+		}
+
 		List<Field> fields = org.apache.commons.lang3.reflect.FieldUtils.getAllFieldsList(target.getClass());
 		Map<String, Object> map = new HashMap<String, Object>();
 		
